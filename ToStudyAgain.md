@@ -8,3 +8,9 @@ Inlining Prevention
 CRTP -> for optimizing the usage of virtual keyword
 TYPE ERASURE
 MOVE SEMANTICS
+CPU architecture for page table per process and TLB(TRANSLATION LOOK ASIDE BUFFER)
+PAGE FAULT
+SWAP memory
+CPU Arch for writing the data
+False sharing
+MESI PROTOCAL
