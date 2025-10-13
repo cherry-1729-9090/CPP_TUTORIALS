@@ -14,3 +14,5 @@ SWAP memory
 CPU Arch for writing the data
 False sharing
 MESI PROTOCAL
+MUTEX & SPIN LOCK
+ATOMIC

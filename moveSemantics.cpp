@@ -96,7 +96,7 @@ class Vector {
     Vector(const Vector& v){
     // const -> the actual object shouldn't be modified
 
-        cout << "Cop yConstructor called"<< endl;
+        cout << "Copy Constructor called"<< endl;
 
         this->size = v.size;
         this->ptr = new int[size];
