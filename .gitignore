@@ -5,3 +5,8 @@
 .env
 *.env.local
 *.env.development.local
+SPSC/build/
+
+build/
+*/build/
+**/build/

@@ -1,0 +1,8 @@
+# First we need to specify the minimum version required for CMake
+cmake_minimum_required(VERSION "4.2.1")
+
+# Specify the project name
+project("CMake tutorials")
+
+#
+

@@ -1,0 +1,22 @@
+CMake 
+- Generates build files for platforms like Makefiles, Ninja, Visual Studio, etc.
+- Uses CMakkeLists.txt files to define project structure, source files, and build instructions.
+- Tracks dependencies and manages the build process.
+
+folder structure:
+project/
+├── CMakeLists.txt          # Root CMake file
+├── src/                    # Source code
+│   ├── CMakeLists.txt     # Source-specific CMake
+│   ├── main.cpp
+│   ├── producer.cpp
+│   └── consumer.cpp
+├── include/                # Public headers
+│   ├── producer.h
+│   └── consumer.h
+├── tests/                  # Unit tests
+│   ├── CMakeLists.txt
+│   └── test_spsc.cpp
+├── build/                  # Build directory (not in version control)
+└── third_party/           # External dependencies
+
