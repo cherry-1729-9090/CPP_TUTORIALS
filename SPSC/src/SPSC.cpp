@@ -41,7 +41,10 @@
 
 using namespace std;
 
+std::mutex buffer_mutex; 
+
 int producer::produce(vector<string>* v, int size){
+    std::lock_guard<std::mutex> lock(buffer_mutex);
     if(v->size() == size)
         return 1;
     std::cout << "Produced\n";
@@ -50,6 +53,7 @@ int producer::produce(vector<string>* v, int size){
 }
 
 int consumer::consume(vector<string>* v,int size){
+    std::lock_guard<std::mutex> lock(buffer_mutex);
     if(v->size()  < 1){
         // donot consume if the size of the buffer is 0
         return 1;
