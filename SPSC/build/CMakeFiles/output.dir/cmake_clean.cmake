@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/output.dir/src/SPSC.cpp.o"
-  "CMakeFiles/output.dir/src/SPSC.cpp.o.d"
+  "CMakeFiles/output.dir/src/SPSC_with_lock.cpp.o"
+  "CMakeFiles/output.dir/src/SPSC_with_lock.cpp.o.d"
   "output"
   "output.pdb"
 )

@@ -8,7 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/Users/devicharan/Documents/CPP_TUTORIALS/SPSC/src/SPSC.cpp" "CMakeFiles/output.dir/src/SPSC.cpp.o" "gcc" "CMakeFiles/output.dir/src/SPSC.cpp.o.d"
+  "/Users/devicharan/Documents/CPP_TUTORIALS/SPSC/src/SPSC_with_lock.cpp" "CMakeFiles/output.dir/src/SPSC_with_lock.cpp.o" "gcc" "CMakeFiles/output.dir/src/SPSC_with_lock.cpp.o.d"
   )
 
 # Targets to which this target links which contain Fortran sources.

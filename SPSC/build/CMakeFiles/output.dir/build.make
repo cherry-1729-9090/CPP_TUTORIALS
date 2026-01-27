@@ -72,28 +72,28 @@ include CMakeFiles/output.dir/flags.make
 CMakeFiles/output.dir/codegen:
 .PHONY : CMakeFiles/output.dir/codegen
 
-CMakeFiles/output.dir/src/SPSC.cpp.o: CMakeFiles/output.dir/flags.make
-CMakeFiles/output.dir/src/SPSC.cpp.o: /Users/devicharan/Documents/CPP_TUTORIALS/SPSC/src/SPSC.cpp
-CMakeFiles/output.dir/src/SPSC.cpp.o: CMakeFiles/output.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/devicharan/Documents/CPP_TUTORIALS/SPSC/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/output.dir/src/SPSC.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/output.dir/src/SPSC.cpp.o -MF CMakeFiles/output.dir/src/SPSC.cpp.o.d -o CMakeFiles/output.dir/src/SPSC.cpp.o -c /Users/devicharan/Documents/CPP_TUTORIALS/SPSC/src/SPSC.cpp
+CMakeFiles/output.dir/src/SPSC_with_lock.cpp.o: CMakeFiles/output.dir/flags.make
+CMakeFiles/output.dir/src/SPSC_with_lock.cpp.o: /Users/devicharan/Documents/CPP_TUTORIALS/SPSC/src/SPSC_with_lock.cpp
+CMakeFiles/output.dir/src/SPSC_with_lock.cpp.o: CMakeFiles/output.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/devicharan/Documents/CPP_TUTORIALS/SPSC/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/output.dir/src/SPSC_with_lock.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/output.dir/src/SPSC_with_lock.cpp.o -MF CMakeFiles/output.dir/src/SPSC_with_lock.cpp.o.d -o CMakeFiles/output.dir/src/SPSC_with_lock.cpp.o -c /Users/devicharan/Documents/CPP_TUTORIALS/SPSC/src/SPSC_with_lock.cpp
 
-CMakeFiles/output.dir/src/SPSC.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/output.dir/src/SPSC.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/devicharan/Documents/CPP_TUTORIALS/SPSC/src/SPSC.cpp > CMakeFiles/output.dir/src/SPSC.cpp.i
+CMakeFiles/output.dir/src/SPSC_with_lock.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/output.dir/src/SPSC_with_lock.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/devicharan/Documents/CPP_TUTORIALS/SPSC/src/SPSC_with_lock.cpp > CMakeFiles/output.dir/src/SPSC_with_lock.cpp.i
 
-CMakeFiles/output.dir/src/SPSC.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/output.dir/src/SPSC.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/devicharan/Documents/CPP_TUTORIALS/SPSC/src/SPSC.cpp -o CMakeFiles/output.dir/src/SPSC.cpp.s
+CMakeFiles/output.dir/src/SPSC_with_lock.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/output.dir/src/SPSC_with_lock.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/devicharan/Documents/CPP_TUTORIALS/SPSC/src/SPSC_with_lock.cpp -o CMakeFiles/output.dir/src/SPSC_with_lock.cpp.s
 
 # Object files for target output
 output_OBJECTS = \
-"CMakeFiles/output.dir/src/SPSC.cpp.o"
+"CMakeFiles/output.dir/src/SPSC_with_lock.cpp.o"
 
 # External object files for target output
 output_EXTERNAL_OBJECTS =
 
-output: CMakeFiles/output.dir/src/SPSC.cpp.o
+output: CMakeFiles/output.dir/src/SPSC_with_lock.cpp.o
 output: CMakeFiles/output.dir/build.make
 output: CMakeFiles/output.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/devicharan/Documents/CPP_TUTORIALS/SPSC/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable output"

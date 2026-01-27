@@ -129,29 +129,66 @@ output/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/output.dir/build.make CMakeFiles/output.dir/build
 .PHONY : output/fast
 
-src/SPSC.o: src/SPSC.cpp.o
-.PHONY : src/SPSC.o
+#=============================================================================
+# Target rules for targets named output2
+
+# Build rule for target.
+output2: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 output2
+.PHONY : output2
+
+# fast build rule for target.
+output2/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/output2.dir/build.make CMakeFiles/output2.dir/build
+.PHONY : output2/fast
+
+src/SPSC_with_lock.o: src/SPSC_with_lock.cpp.o
+.PHONY : src/SPSC_with_lock.o
 
 # target to build an object file
-src/SPSC.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/output.dir/build.make CMakeFiles/output.dir/src/SPSC.cpp.o
-.PHONY : src/SPSC.cpp.o
+src/SPSC_with_lock.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/output.dir/build.make CMakeFiles/output.dir/src/SPSC_with_lock.cpp.o
+.PHONY : src/SPSC_with_lock.cpp.o
 
-src/SPSC.i: src/SPSC.cpp.i
-.PHONY : src/SPSC.i
+src/SPSC_with_lock.i: src/SPSC_with_lock.cpp.i
+.PHONY : src/SPSC_with_lock.i
 
 # target to preprocess a source file
-src/SPSC.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/output.dir/build.make CMakeFiles/output.dir/src/SPSC.cpp.i
-.PHONY : src/SPSC.cpp.i
+src/SPSC_with_lock.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/output.dir/build.make CMakeFiles/output.dir/src/SPSC_with_lock.cpp.i
+.PHONY : src/SPSC_with_lock.cpp.i
 
-src/SPSC.s: src/SPSC.cpp.s
-.PHONY : src/SPSC.s
+src/SPSC_with_lock.s: src/SPSC_with_lock.cpp.s
+.PHONY : src/SPSC_with_lock.s
 
 # target to generate assembly for a file
-src/SPSC.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/output.dir/build.make CMakeFiles/output.dir/src/SPSC.cpp.s
-.PHONY : src/SPSC.cpp.s
+src/SPSC_with_lock.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/output.dir/build.make CMakeFiles/output.dir/src/SPSC_with_lock.cpp.s
+.PHONY : src/SPSC_with_lock.cpp.s
+
+src/SPSC_with_rb.o: src/SPSC_with_rb.cpp.o
+.PHONY : src/SPSC_with_rb.o
+
+# target to build an object file
+src/SPSC_with_rb.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/output2.dir/build.make CMakeFiles/output2.dir/src/SPSC_with_rb.cpp.o
+.PHONY : src/SPSC_with_rb.cpp.o
+
+src/SPSC_with_rb.i: src/SPSC_with_rb.cpp.i
+.PHONY : src/SPSC_with_rb.i
+
+# target to preprocess a source file
+src/SPSC_with_rb.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/output2.dir/build.make CMakeFiles/output2.dir/src/SPSC_with_rb.cpp.i
+.PHONY : src/SPSC_with_rb.cpp.i
+
+src/SPSC_with_rb.s: src/SPSC_with_rb.cpp.s
+.PHONY : src/SPSC_with_rb.s
+
+# target to generate assembly for a file
+src/SPSC_with_rb.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/output2.dir/build.make CMakeFiles/output2.dir/src/SPSC_with_rb.cpp.s
+.PHONY : src/SPSC_with_rb.cpp.s
 
 # Help Target
 help:
@@ -162,9 +199,13 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... output"
-	@echo "... src/SPSC.o"
-	@echo "... src/SPSC.i"
-	@echo "... src/SPSC.s"
+	@echo "... output2"
+	@echo "... src/SPSC_with_lock.o"
+	@echo "... src/SPSC_with_lock.i"
+	@echo "... src/SPSC_with_lock.s"
+	@echo "... src/SPSC_with_rb.o"
+	@echo "... src/SPSC_with_rb.i"
+	@echo "... src/SPSC_with_rb.s"
 .PHONY : help
 
 

@@ -5,13 +5,13 @@ cmake_minimum_required(VERSION 3.16) # Last stable version
 project("Single producer single consumer")
 
 # add executable files - cpp files
-add_executable(output src/SPSC.cpp)
-
+add_executable(output src/SPSC_with_lock.cpp)
+add_executable(output2 src/SPSC_with_rb)
 # link external libraries like threading
 # We first need to find the package and then link it with the project
 find_package(Threads REQUIRED)
 target_link_libraries(output PRIVATE Threads::Threads)
-
+target_link_libraries(output2 PRIVATE Threads::Threads) # for the spsc with atomics
 
 # op - <name of the desired output file>
 
