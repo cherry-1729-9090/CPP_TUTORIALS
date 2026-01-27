@@ -24,7 +24,8 @@ class RingBuffer{
         size_t currentTail = tail.load(std::memory_order_relaxed);
 
         // calculate the next tail
-        size_t nextTail = (currentTail + 1) % size;
+        // size_t nextTail = (currentTail + 1) % size;
+        size_t nextTail = (currentTail + 1) & (size - 1); // bit optimisation
 
         // need to check if the buffer is full
         // As per our intuition if the tail is just behind the head, then buffer is full
@@ -55,7 +56,8 @@ class RingBuffer{
         val = buffer[currentHead];
 
         // calculate the next head
-        size_t nextHead = (currentHead + 1) % size;
+        // size_t nextHead = (currentHead + 1) % size;
+        size_t nextHead = (currentHead + 1) & (size - 1);
 
         // write it safely
         head.store(nextHead, std::memory_order_relaxed);
