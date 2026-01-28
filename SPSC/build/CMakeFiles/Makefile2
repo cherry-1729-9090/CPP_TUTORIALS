@@ -65,11 +65,13 @@ CMAKE_BINARY_DIR = /Users/devicharan/Documents/CPP_TUTORIALS/SPSC/build
 # The main recursive "all" target.
 all: CMakeFiles/output.dir/all
 all: CMakeFiles/output2.dir/all
+all: CMakeFiles/output3.dir/all
 .PHONY : all
 
 # The main recursive "codegen" target.
 codegen: CMakeFiles/output.dir/codegen
 codegen: CMakeFiles/output2.dir/codegen
+codegen: CMakeFiles/output3.dir/codegen
 .PHONY : codegen
 
 # The main recursive "preinstall" target.
@@ -79,6 +81,7 @@ preinstall:
 # The main recursive "clean" target.
 clean: CMakeFiles/output.dir/clean
 clean: CMakeFiles/output2.dir/clean
+clean: CMakeFiles/output3.dir/clean
 .PHONY : clean
 
 #=============================================================================
@@ -144,6 +147,38 @@ CMakeFiles/output2.dir/codegen:
 CMakeFiles/output2.dir/clean:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/output2.dir/build.make CMakeFiles/output2.dir/clean
 .PHONY : CMakeFiles/output2.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/output3.dir
+
+# All Build rule for target.
+CMakeFiles/output3.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/output3.dir/build.make CMakeFiles/output3.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/output3.dir/build.make CMakeFiles/output3.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/devicharan/Documents/CPP_TUTORIALS/SPSC/build/CMakeFiles --progress-num=5,6 "Built target output3"
+.PHONY : CMakeFiles/output3.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/output3.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/devicharan/Documents/CPP_TUTORIALS/SPSC/build/CMakeFiles 2
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/output3.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/devicharan/Documents/CPP_TUTORIALS/SPSC/build/CMakeFiles 0
+.PHONY : CMakeFiles/output3.dir/rule
+
+# Convenience name for target.
+output3: CMakeFiles/output3.dir/rule
+.PHONY : output3
+
+# codegen rule for target.
+CMakeFiles/output3.dir/codegen:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/output3.dir/build.make CMakeFiles/output3.dir/codegen
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/devicharan/Documents/CPP_TUTORIALS/SPSC/build/CMakeFiles --progress-num=5,6 "Finished codegen for target output3"
+.PHONY : CMakeFiles/output3.dir/codegen
+
+# clean rule for target.
+CMakeFiles/output3.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/output3.dir/build.make CMakeFiles/output3.dir/clean
+.PHONY : CMakeFiles/output3.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

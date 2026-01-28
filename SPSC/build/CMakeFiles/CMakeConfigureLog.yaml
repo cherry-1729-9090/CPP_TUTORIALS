@@ -2100,3 +2100,429 @@ events:
         
       exitCode: 0
 ...
+
+---
+events:
+  -
+    kind: "find_package-v1"
+    backtrace:
+      - "CMakeLists.txt:19 (find_package)"
+    name: "SYSTEM"
+    configs:
+      -
+        filename: "SYSTEMConfig.cmake"
+        kind: "cmake"
+      -
+        filename: "system-config.cmake"
+        kind: "cmake"
+    version_request:
+      exact: false
+    settings:
+      required: "required_explicit"
+      quiet: false
+      global: false
+      policy_scope: true
+      bypass_provider: false
+      names:
+        - "SYSTEM"
+      path_suffixes:
+        - ""
+      paths:
+        CMAKE_FIND_USE_CMAKE_PATH: true
+        CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+        CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+        CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+        CMAKE_FIND_USE_INSTALL_PREFIX: true
+        CMAKE_FIND_USE_PACKAGE_ROOT_PATH: true
+        CMAKE_FIND_USE_CMAKE_PACKAGE_REGISTRY: true
+        CMAKE_FIND_USE_SYSTEM_PACKAGE_REGISTRY: true
+        CMAKE_FIND_ROOT_PATH_MODE: "BOTH"
+    candidates:
+      -
+        path: "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks/System.framework/Resources/SYSTEMConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks/System.framework/Resources/system-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks/System.framework/Versions/Current/Resources/SYSTEMConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks/System.framework/Versions/Current/Resources/system-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks/System.framework/Versions/B/Resources/SYSTEMConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks/System.framework/Versions/B/Resources/system-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/System/Library/Frameworks/System.framework/Resources/SYSTEMConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/System/Library/Frameworks/System.framework/Resources/system-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/System/Library/Frameworks/System.framework/Versions/Current/Resources/SYSTEMConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/System/Library/Frameworks/System.framework/Versions/Current/Resources/system-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/System/Library/Frameworks/System.framework/Versions/B/Resources/SYSTEMConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/System/Library/Frameworks/System.framework/Versions/B/Resources/system-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/Users/devicharan/Documents/CPP_TUTORIALS/SPSC/build/CMakeFiles/pkgRedirects/SYSTEMConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/Users/devicharan/Documents/CPP_TUTORIALS/SPSC/build/CMakeFiles/pkgRedirects/system-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/Library/Java/JavaVirtualMachines/zulu-17.jdk/Contents/Home/SYSTEMConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/Library/Java/JavaVirtualMachines/zulu-17.jdk/Contents/Home/system-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/opt/homebrew/opt/openjdk@11/SYSTEMConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/opt/homebrew/opt/openjdk@11/system-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/Users/devicharan/.nvm/versions/node/v22.21.0/SYSTEMConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/Users/devicharan/.nvm/versions/node/v22.21.0/system-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/Users/devicharan/.rbenv/shims/SYSTEMConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/Users/devicharan/.rbenv/shims/system-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/Users/devicharan/.rbenv/SYSTEMConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/Users/devicharan/.rbenv/system-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/opt/homebrew/SYSTEMConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/opt/homebrew/system-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/local/SYSTEMConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/local/system-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/System/Cryptexes/App/usr/SYSTEMConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/System/Cryptexes/App/usr/system-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/SYSTEMConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/system-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/lib/system/SYSTEMConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/lib/system/system-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/SYSTEMConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/system-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/System/SYSTEMConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/System/system-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/Library/Apple/usr/SYSTEMConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/Library/Apple/usr/system-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/Users/devicharan/Library/Android/sdk/emulator/SYSTEMConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/Users/devicharan/Library/Android/sdk/emulator/system-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/Users/devicharan/Library/Android/sdk/platform-tools/SYSTEMConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/Users/devicharan/Library/Android/sdk/platform-tools/system-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/Users/devicharan/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/SYSTEMConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/Users/devicharan/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/system-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/SYSTEMConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/system-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/lib/system/SYSTEMConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/lib/system/system-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/opt/SYSTEMConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/opt/system-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks/SYSTEMConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks/system-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks/SystemExtensions.framework/SYSTEMConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks/SystemExtensions.framework/system-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks/SystemConfiguration.framework/SYSTEMConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks/SystemConfiguration.framework/system-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks/System.framework/SYSTEMConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks/System.framework/system-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/Library/Developer/CommandLineTools/Library/Frameworks/SYSTEMConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/Library/Developer/CommandLineTools/Library/Frameworks/system-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/SYSTEMConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/system-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/Library/Frameworks/SYSTEMConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/Library/Frameworks/system-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/System/Library/Frameworks/SYSTEMConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/System/Library/Frameworks/system-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/System/Library/Frameworks/SystemExtensions.framework/SYSTEMConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/System/Library/Frameworks/SystemExtensions.framework/system-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/System/Library/Frameworks/SystemConfiguration.framework/SYSTEMConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/System/Library/Frameworks/SystemConfiguration.framework/system-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/System/Library/Frameworks/System.framework/SYSTEMConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/System/Library/Frameworks/System.framework/system-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/Users/devicharan/Applications/SYSTEMConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/Users/devicharan/Applications/system-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/Applications/SYSTEMConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/Applications/system-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/Applications/Xcode.app/Contents/Applications/SYSTEMConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/Applications/Xcode.app/Contents/Applications/system-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/Applications/Xcode.app/Contents/Developer/Applications/SYSTEMConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/Applications/Xcode.app/Contents/Developer/Applications/system-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+    found: null
+    search_context:
+      ENV{PATH}:
+        - "/Library/Java/JavaVirtualMachines/zulu-17.jdk/Contents/Home/bin"
+        - "/opt/homebrew/opt/openjdk@11/bin"
+        - "/Users/devicharan/.nvm/versions/node/v22.21.0/bin"
+        - "/Users/devicharan/.rbenv/shims"
+        - "/Users/devicharan/.rbenv/bin"
+        - "/opt/homebrew/bin"
+        - "/opt/homebrew/sbin"
+        - "/usr/local/bin"
+        - "/System/Cryptexes/App/usr/bin"
+        - "/usr/bin"
+        - "/bin"
+        - "/usr/sbin"
+        - "/sbin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin"
+        - "/opt/pmk/env/global/bin"
+        - "/Library/Apple/usr/bin"
+        - "/Library/Java/JavaVirtualMachines/zulu-17.jdk/Contents/Home/bin"
+        - "/opt/homebrew/opt/openjdk@11/bin"
+        - "/Users/devicharan/.nvm/versions/node/v22.21.0/bin"
+        - "/Users/devicharan/.rbenv/shims"
+        - "/Users/devicharan/.rbenv/bin"
+        - "/Users/devicharan/Library/Android/sdk/emulator"
+        - "/Users/devicharan/Library/Android/sdk/platform-tools"
+        - "/Users/devicharan/Library/Android/sdk/tools"
+        - "/Users/devicharan/Library/Android/sdk/tools/bin"
+        - "/Users/devicharan/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand"
+        - "/Users/devicharan/Library/Android/sdk/emulator"
+        - "/Users/devicharan/Library/Android/sdk/platform-tools"
+        - "/Users/devicharan/Library/Android/sdk/tools"
+        - "/Users/devicharan/Library/Android/sdk/tools/bin"
+      CMAKE_INSTALL_PREFIX: "/usr/local"
+      CMAKE_SYSTEM_PREFIX_PATH:
+        - "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr"
+        - "/opt/homebrew"
+        - "/usr/local"
+        - "/usr"
+        - "/"
+        - "/opt/homebrew"
+        - "/usr/local"
+        - "/usr/X11R6"
+        - "/usr/pkg"
+        - "/opt"
+        - "/sw"
+        - "/opt/local"
+      CMAKE_SYSTEM_FRAMEWORK_PATH:
+        - "~/Library/Frameworks"
+        - "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/Library/Frameworks"
+        - "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/Network/Library/Frameworks"
+        - "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks"
+        - "/Library/Developer/CommandLineTools/Library/Frameworks"
+        - "/Applications/Xcode.app/Contents/Developer/Library/Frameworks"
+        - "/Library/Frameworks"
+        - "/Network/Library/Frameworks"
+        - "/System/Library/Frameworks"
+...

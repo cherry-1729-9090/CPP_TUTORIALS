@@ -142,6 +142,43 @@ output2/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/output2.dir/build.make CMakeFiles/output2.dir/build
 .PHONY : output2/fast
 
+#=============================================================================
+# Target rules for targets named output3
+
+# Build rule for target.
+output3: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 output3
+.PHONY : output3
+
+# fast build rule for target.
+output3/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/output3.dir/build.make CMakeFiles/output3.dir/build
+.PHONY : output3/fast
+
+src/SPSC_with_SHM.o: src/SPSC_with_SHM.cpp.o
+.PHONY : src/SPSC_with_SHM.o
+
+# target to build an object file
+src/SPSC_with_SHM.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/output3.dir/build.make CMakeFiles/output3.dir/src/SPSC_with_SHM.cpp.o
+.PHONY : src/SPSC_with_SHM.cpp.o
+
+src/SPSC_with_SHM.i: src/SPSC_with_SHM.cpp.i
+.PHONY : src/SPSC_with_SHM.i
+
+# target to preprocess a source file
+src/SPSC_with_SHM.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/output3.dir/build.make CMakeFiles/output3.dir/src/SPSC_with_SHM.cpp.i
+.PHONY : src/SPSC_with_SHM.cpp.i
+
+src/SPSC_with_SHM.s: src/SPSC_with_SHM.cpp.s
+.PHONY : src/SPSC_with_SHM.s
+
+# target to generate assembly for a file
+src/SPSC_with_SHM.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/output3.dir/build.make CMakeFiles/output3.dir/src/SPSC_with_SHM.cpp.s
+.PHONY : src/SPSC_with_SHM.cpp.s
+
 src/SPSC_with_lock.o: src/SPSC_with_lock.cpp.o
 .PHONY : src/SPSC_with_lock.o
 
@@ -200,6 +237,10 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... output"
 	@echo "... output2"
+	@echo "... output3"
+	@echo "... src/SPSC_with_SHM.o"
+	@echo "... src/SPSC_with_SHM.i"
+	@echo "... src/SPSC_with_SHM.s"
 	@echo "... src/SPSC_with_lock.o"
 	@echo "... src/SPSC_with_lock.i"
 	@echo "... src/SPSC_with_lock.s"
