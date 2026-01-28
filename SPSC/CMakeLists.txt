@@ -15,7 +15,11 @@ find_package(Threads REQUIRED)
 target_link_libraries(output PRIVATE Threads::Threads)
 target_link_libraries(output2 PRIVATE Threads::Threads) # for the spsc with atomics
 target_link_libraries(output3 PRIVATE Threads::Threads)
-target_link_libraries(output3 PRIVATE rt) # Memory support for SHM_rbf
+
+# Link rt library only on Linux (not needed on macOS)
+if(UNIX AND NOT APPLE)
+    target_link_libraries(output3 PRIVATE rt)
+endif()
 
 # op - <name of the desired output file>
 

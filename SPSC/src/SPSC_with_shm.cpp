@@ -42,94 +42,53 @@
 #include <fcntl.h>           /* For O_* constants */
 #include <unistd.h>          /* For ftruncate */
 #include <atomic>
+#include <cstring>
 
 using namespace std;
 
-// prefer memory_order_acquire for read operations
-// prefer memory_order_release for write operations
-bool SHM_RBF::produce(const string* val, string* path){
-    // Create file if not there or open if there in RAM
-    int fd = shm_open(path->c_str(), O_RDWR, 0777);
-
-    // strech the given file with the size of SHM_RBF object
-    ftruncate(fd, sizeof(SHM_RBF));
-
-    // use mmap to make the file in the given path as a shared one
-    void* ptr = mmap(0, PROT_READ | PROT_WRITE, MAP_SHARED, fd, 0);
-
-    // convert the pointer to our RingBuffer's pointer
-    SHM_RBF* rbf = new (ptr) SHM_RBF(); // fore the constructor to run and convert our void ptr
-
-    // here comes our logic for producer
-    size_t currentTail = rbf->tail.load(memory_order_acquire);
-
-    size_t nextTail = (currentTail + 1) & (rbf->size - 1);
-
-    if(currentTail + 1 == rbf->head.load(memory_order_acquire)){
-        return false; // buffer is full
-    }
-
-    rbf->buffer[currentTail] = val;
-
-    rbf->tail.store(nextTail, memory_order_release);
-    
-    return true;
-}
-
-bool SHM_RBF::consume(string* val, string* path){
-    // Create file if not there or open if there in RAM
-    int fd = shm_open(path->c_str(), O_RDWR, 0777);
-
-    // no need to use ftruncate over here
-
-    // use mmap
-    void* ptr = mmap(0, PROT_READ | PROT_WRITE, MAP_SHARED, fd, 0);
-
-    // convert the pointer to our RingBuffer's pointer
-    SHM_RBF* rbf = new (ptr) SHM_RBF(); // fore the constructor to run and convert our void ptr
-    
-    // here comes our logic for consumer 
-    size_t currentHead = rbf->head.load(memory_order_acquire);
-
-    if(currentHead == rbf->tail.load(memory_order_acquire)){
-        return false; // Buffer is empty
-    }
-
-    val = rbf->buffer[currentHead];
-
-    size_t nextHead = (currentHead + 1) & (rbf->size - 1);
-
-    rbf->head.store(nextHead, memory_order_release);
-
-    return true;
-}
-
 int main(){
 
-    SHM_RBF<string, 1024> rb{};
+    const char* filePath = "./src/";
+    const int SIZE = sizeof(SHM_RBF<1024>);
 
-    string filePath = "./src/"
+    // file descriptor
+    int fd = shm_open(filePath, O_CREAT | O_RDWR, 0666);
+
+    // ftruncate
+    ftruncate(fd, SIZE);
+
+    // use mmap
+    void* ptr = mmap(0, SIZE, PROT_READ | PROT_WRITE, MAP_SHARED, fd, 0);
+
+    SHM_RBF<1024>* rbf = new (ptr) SHM_RBF<1024>();
+
 
     std::thread producerThread([&](){
-        string data = "packet";
         for(int i = 0; i < 100; i++){
-            while(!rb.produce(data + to_string(i), filePath)){
+            string data = "packet";
+            data = data + to_string(i);
+            while(!rbf->produce(data.c_str())){
             }
             std::cout << "Produced \n";
         }
     });
 
     std::thread consumerThread([&](){
-        string data = "packet";
         for(int i = 0; i < 100; i++){
-            while(!rb.consume(data + to_string(i), filePath)){
+            char received_data[64];  // Buffer to receive consumed data
+            while(!rbf->consume(received_data)){
             }
-            std::cout << "Produced \n";
+            std::cout << "Consumed: " << received_data << "\n";
         }
     });
 
     producerThread.join();
     consumerThread.join();
+
+    // Cleanup shared memory
+    munmap(ptr, SIZE);
+    close(fd);
+    shm_unlink(filePath);
 
     return 0;
 }
